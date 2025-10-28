@@ -1,0 +1,101 @@
+[index.html.html](https://github.com/user-attachments/files/23198777/index.html.html)
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>花果山活动报名</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff4b4b;
+    }
+    .note {
+      font-size: 13px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>花果山活动报名</h1>
+    <p class="note">请填写以下信息，我们会在24小时内联系您确认。</p>
+    <form action="https://formspree.io/f/xjkaqeje" method="POST">
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+
+      <label for="phone">手机（必填）：</label>
+      <input type="tel" id="phone" name="phone" required placeholder="请输入手机号">
+
+      <label for="email">邮箱：</label>
+      <input type="email" id="email" name="email" placeholder="选填">
+
+      <label for="party_size">人数：</label>
+      <select id="party_size" name="party_size" required>
+        <option value="">请选择人数</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8+">8+</option>
+      </select>
+
+      <label for="datetime">希望到场日期与时间：</label>
+      <input type="datetime-local" id="datetime" name="datetime">
+
+      <label for="notes">备注：</label>
+      <textarea id="notes" name="notes" placeholder="例如：靠窗、生日蛋糕等"></textarea>
+
+      <button type="submit">提交报名</button>
+    </form>
+    <p class="note">页面通过 <a href="https://formspree.io" target="_blank">Formspree</a> 收集信息，无需后台。</p>
+  </div>
+</body>
+</html>
